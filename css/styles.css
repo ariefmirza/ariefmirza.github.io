@@ -90,6 +90,29 @@ body {
 
 .list-container ul {
   text-align: left;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0px;
+}
+
+.list-container li {
+  margin-bottom: 15px; /* Adds spacing between each item */
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column; /* Stacks the SHM details and a/n on separate lines */
+}
+
+.list-item span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.list-item div {
+  font-size: 0.95rem;
+  color: #555;
+  margin-left: 20px; /* Indents the a/n part slightly */
 }
 
 /* Images */
