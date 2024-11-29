@@ -81,6 +81,14 @@ body {
   color: #2c662d;
 }
 
+/* Description Text */
+.description {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 10px; /* Slight margin below */
+  color: #444; /* Neutral color */
+}
+
 /* List Container */
 .list-container {
   display: flex;
@@ -90,18 +98,19 @@ body {
 
 .list-container ul {
   text-align: left;
-  list-style-type: none;
+  list-style-type: none; /* Removes bullet points */
   padding: 0;
-  margin-top: 0px;
+  margin: 0;
+  padding-left: 15px; /* Matches lead text indentation */
 }
 
 .list-container li {
   margin-bottom: 15px; /* Adds spacing between each item */
+
 }
 
-.list-item {
-  display: flex;
-  flex-direction: column; /* Stacks the SHM details and a/n on separate lines */
+.list-container li strong {
+  color: #2c662d;
 }
 
 .list-item span {
@@ -174,6 +183,22 @@ body {
       margin-left: 10px;
       margin-right: 10px;
   }
+
+  .hero h1 {
+      font-size: 2rem;
+  }
+
+  .hero p {
+      font-size: 1rem;
+  }
+
+  .images {
+      flex-direction: column;
+  }
+
+  .list-container ul {
+      padding-left: 10px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -181,9 +206,27 @@ body {
       margin-left: 5px;
       margin-right: 5px;
   }
+
   .peta-lokasi-figure {
       margin-left: 5px;
       margin-right: 5px;
+  }
+
+  .hero {
+      height: 250px;
+  }
+
+  .hero h1 {
+      font-size: 1.8rem;
+  }
+
+  .hero p {
+      font-size: 0.9rem;
+  }
+
+  .button {
+      padding: 8px 15px;
+      font-size: 0.9rem;
   }
 }
 
@@ -203,15 +246,51 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Divider Line */
+.divider {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 10px 0;
+}
+
+/* "Hubungi:" Text */
+.hubungi-text {
+  text-align: center; /* Center the text */
+  font-size: 1rem; /* Adjust size */
+  color: #555; /* Slightly muted color */
+  font-weight: 600; /* Make it stand out but not bold */
+  margin-bottom: 15px; /* Add space between text and buttons */
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  gap: 20px; /* Space between groups */
+  justify-content: center; /* Center groups horizontally */
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px; /* Space between buttons in a group */
+}
+
 /* Button */
 .button {
+  flex: 1;
   padding: 10px 20px;
-  margin: 20px;
   background: #2c662d;
   color: white;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+  text-align: center;
+  display: flex; /* Make it flex to align icon and text */
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between icon and text */
   transition: background 0.3s;
 }
 
